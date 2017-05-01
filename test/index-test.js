@@ -1,16 +1,19 @@
+// first 4 lines references different libraries
 const expect = require('expect')
 const fs = require('fs')
 const jsdom = require('jsdom')
 const path = require('path')
 
-
+// function provided by test runner, container for tests. this lab is using Mocha
 describe('index', () => {
   const html = '<div></div>'
   const src = path.resolve(__dirname, '..', 'index.js')
 
+  // behavior expected the main program to implement
   it('calls console.error()', done => {
     const spy = expect.spyOn(console, 'error').andCallThrough()
 
+    // 'jsdom({code and more code})' reads index.js & adds code to execution env:where code runs
     jsdom.env(html, [src], {
       virtualConsole: jsdom.createVirtualConsole().sendTo(console)
     }, (err, window) => {
