@@ -1,3 +1,3 @@
-console.error("We have an error");
-console.log("You are IN");
-console.warn("Don't do that");
+console.error("We have one thousand errors");
+console.log("You are log in");
+console.warn("Nine");
