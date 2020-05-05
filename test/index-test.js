@@ -4,7 +4,7 @@ const jsdom = require('jsdom')
 const path = require('path')
 
 
-describe('index', () => {
+describe('index', () => { // describe is a function provided by our test runner (in this case, we're using Mocha) — it's basically a container for our tests. //
   const html = '<div></div>'
   const src = path.resolve(__dirname, '..', 'index.js')
 
